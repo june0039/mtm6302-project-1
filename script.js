@@ -1,6 +1,10 @@
 /* Idea Forum Web Design 3
 By: Julie Juneau
+<<<<<<< HEAD
 Student# 040930994*/
+=======
+Student# 040930994 */
+>>>>>>> f4e6aa895f4b32aa6348217a974763bf3485c121
 
 const data = {
   currentUser: 'currentUser',
@@ -36,8 +40,13 @@ const data = {
       score: 3,
     },
     {
+<<<<<<< HEAD
         username: 'currentUser',
               content:
+=======
+      username: 'currentUser',
+      content:
+>>>>>>> f4e6aa895f4b32aa6348217a974763bf3485c121
         'Id aute eu quis tempor laborum duis nostrud proident nostrud culpa est ad. Do dolor cillum ullamco excepteur eiusmod laboris dolore do Lorem. Exercitation eiusmod laborum enim culpa esse.\r\n',
       score: 1,
     },
