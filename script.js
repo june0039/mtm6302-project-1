@@ -1,10 +1,10 @@
 /* Idea Forum Web Design 3
 By: Julie Juneau
-<<<<<<< HEAD
 Student# 040930994*/
-=======
-Student# 040930994 */
->>>>>>> f4e6aa895f4b32aa6348217a974763bf3485c121
+
+const $ideaContainer = document.getElementById('ideaContainer');
+
+
 
 const data = {
   currentUser: 'currentUser',
@@ -40,13 +40,8 @@ const data = {
       score: 3,
     },
     {
-<<<<<<< HEAD
         username: 'currentUser',
               content:
-=======
-      username: 'currentUser',
-      content:
->>>>>>> f4e6aa895f4b32aa6348217a974763bf3485c121
         'Id aute eu quis tempor laborum duis nostrud proident nostrud culpa est ad. Do dolor cillum ullamco excepteur eiusmod laboris dolore do Lorem. Exercitation eiusmod laborum enim culpa esse.\r\n',
       score: 1,
     },
@@ -58,4 +53,26 @@ const data = {
   ],
 }
 
+/*Fuction to display all the info in an array */
+function displayData() {
+  
+  
+/* For loop to fill array */
+
+  for (let i = 0; i < data.length; i++) {
+  
+    HTML.push(`<li class="list-group-item">${ideaContainer[i]}
+  <button type="button" class="btn btn primary" aria-label="subtract" data-index="-"></button></li>`)
+
+}
+
+/* Add Ideas function */
+
+
+/* Need a "you" tag on current user and up down vote */
+
+/* Delete a Idea button */
+<button type="button" class="btn-delete" aria-label="Delete"></button>
+    
+/* Edit an Idea  button*/
 
