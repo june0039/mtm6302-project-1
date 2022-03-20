@@ -59,13 +59,25 @@ const data = {
 
 /*Fuction to display all the info in an array */
 function displayData() {
-
-  const HTML = []
+//created array to hold html string
   
- 
-/* For loop to fill array */
+  const HTML = []
 
-  for (let i = 0; i < data.length; i++) {
+  /* For loop to fill array */
+
+  for (let i = 0; i < data.length; i++){
+    HTML.push(`<li class="list-group-item"> ${data[i]}
+    <button type="button" class="btn-close" aria-label="Close" data-index"${index}"></button></li>`)
+  }
+
+  //insert html array into newIdea text area
+  $newIdea.innerHTML = html.join('')
+
+  //invoke array
+
+  ListnewIdea()
+
+ /* for (let i = 0; i < data.length; i++) {
   
     HTML.push(`<li class="list-group-item d-flex justify-content-between">${$ideaContainer[i]}
 <button type="button" class="btn close" aria-label="close" data-index="${index}"></button></li>`)
@@ -74,24 +86,24 @@ function displayData() {
 
 /* Add Ideas function */
   
-  $addIdea.addEventListener('submit', function (e) {
-  //Adds Idea to the Idea's area
-    e.preventDefault();
+  //$addIdea.addEventListener('submit', function (e) {
+  //*Adds Idea to the Idea's area
+   // e.preventDefault();
 
-    data.push($newIdea.value)
+   // data.push($newIdea.value)
     
     //clear the form
 
-    $addnewIdea.reset()
+  //  $addnewIdea.reset()
 
     //Invoke the new idea to update 
      
-    List.ideas[];
+   // List.ideas[];
 
-    displayData.ideas[]
+   // displayData.ideas[]
 
 
-})
+//})
 
 /* Need a "you" tag on current user and up down vote */
 
