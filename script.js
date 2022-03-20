@@ -8,7 +8,7 @@ const $newIdea = document.getElementById('newIdea');
 const $delete = document.getElementById('delete');
 const $form = document.getElementById('form');
 const $username = document.getElementById('username');
-
+const $data = document.getElementById('data');
 
 const data = {
   currentUser: 'currentUser',
@@ -59,13 +59,15 @@ const data = {
 
 /*Fuction to display all the info in an array */
 function displayData() {
+
+  const HTML = []
   
  
 /* For loop to fill array */
 
   for (let i = 0; i < data.length; i++) {
   
-    HTML.push(`<li class="list-group-item d-flex justify-content-between">${data[i]}
+    HTML.push(`<li class="list-group-item d-flex justify-content-between">${$ideaContainer[i]}
 <button type="button" class="btn close" aria-label="close" data-index="${index}"></button></li>`)
 
 }
