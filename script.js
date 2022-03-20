@@ -65,9 +65,8 @@ function displayData() {
 
   for (let i = 0; i < data.length; i++) {
   
-    HTML.push(`<li class="list-group-item">${ideaContainer[i]}
-<button type="button" class="btn btn primary" aria-label="subtract" data-index="-">
-<button type="button" class="btn-info" aria-label="add" data+index="+"</button></li>`)
+    HTML.push(`<li class="list-group-item d-flex justify-content-between">${data[i]}
+<button type="button" class="btn close" aria-label="close" data-index="${index}"></button></li>`)
 
 }
 
@@ -77,7 +76,18 @@ function displayData() {
   //Adds Idea to the Idea's area
     e.preventDefault();
 
-    ideas.push($newIdea.value)
+    data.push($newIdea.value)
+    
+    //clear the form
+
+    $addnewIdea.reset()
+
+    //Invoke the new idea to update 
+     
+    List.ideas[];
+
+    displayData.ideas[]
+
 
 })
 
