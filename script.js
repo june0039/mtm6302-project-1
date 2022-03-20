@@ -3,8 +3,8 @@ By: Julie Juneau
 Student# 040930994*/
 
 const $ideaContainer = document.getElementById('ideaContainer');
-const $add = document.getElementById('add');
-const $idea = document.getElementById('idea');
+const $addIdea = document.getElementById('add');
+const $newIdea = document.getElementById('newIdea');
 const $delete = document.getElementById('delete');
 const $form = document.getElementById('form');
 const $username = document.getElementById('username');
@@ -73,12 +73,18 @@ function displayData() {
 
 /* Add Ideas function */
   
+  $addIdea.addEventListener('submit', function (e) {
+  //Adds Idea to the Idea's area
+    e.preventDefault();
 
+    ideas.push($newIdea.value)
+
+})
 
 /* Need a "you" tag on current user and up down vote */
 
 /* Delete a Idea button */
-<button type="button" class="btn-delete" aria-label="Delete"></button>
+/*<button type ="delete" class="btn-delete" aria-label="Delete"></button>
     
 /* Edit an Idea  button*/
 
