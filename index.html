@@ -22,14 +22,21 @@
          <h2 id="username"></h2>
           <p id="ideatext"></p>
            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <!--<button class="btn btn-primary" type="button">+</button>
-  <button class="btn btn-primary" type="button">-</button>-->
+  <button class="btn btn-primary" type="button">+</button>
+  <button class="btn btn-primary" type="button">-</button>
 </div>
 
-            <form id = "addIdea" class ="idea">
-            <input type ="text" class="form-control" id="newIdea" placeholder="New Idea"></form>
-            
+            <form id = "idea" class ="idea">
+            <div class="mb-3 bg-info">
+  <label for="Textarea " class="form-label ">New Idea</label>
+  <textarea class="form-control bg-light" id="newIdea" rows="3">
+ </textarea>
+
+   <button id="add" class="btn btn-primary" type='submit'>Add Idea</button>
+</div>
         </form>
+           
+      
 
     </body>
     <!-- JavaScript for Bootstrap Link-->
