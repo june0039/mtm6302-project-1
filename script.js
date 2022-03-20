@@ -3,7 +3,11 @@ By: Julie Juneau
 Student# 040930994*/
 
 const $ideaContainer = document.getElementById('ideaContainer');
-
+const $add = document.getElementById('add');
+const $idea = document.getElementById('idea');
+const $delete = document.getElementById('delete');
+const $form = document.getElementById('form');
+const $username = document.getElementById('username');
 
 
 const data = {
@@ -56,17 +60,19 @@ const data = {
 /*Fuction to display all the info in an array */
 function displayData() {
   
-  
+ 
 /* For loop to fill array */
 
   for (let i = 0; i < data.length; i++) {
   
     HTML.push(`<li class="list-group-item">${ideaContainer[i]}
-  <button type="button" class="btn btn primary" aria-label="subtract" data-index="-"></button></li>`)
+<button type="button" class="btn btn primary" aria-label="subtract" data-index="-">
+<button type="button" class="btn-info" aria-label="add" data+index="+"</button></li>`)
 
 }
 
 /* Add Ideas function */
+  
 
 
 /* Need a "you" tag on current user and up down vote */
@@ -76,3 +82,7 @@ function displayData() {
     
 /* Edit an Idea  button*/
 
+  /*ideaScore
+/*idea
+/*up vote/ down vote
+/* you tag delete add
