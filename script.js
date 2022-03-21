@@ -59,30 +59,32 @@ const data = {
 
 /*Fuction to display all the info in an array */
 function displayData() {
-//created array to hold html string
+  //created array to hold html string
   
   const HTML = []
 
   /* For loop to fill array */
 
-  for (let i = 0; i < data.length; i++){
-    HTML.push(`<li class="list-group-item"> ${data[i]}
+  for (let index = 0; index < data.length; index++) {
+    HTML.push(`<li class="list-group-item"> ${data[index]}
     <button type="button" class="btn-close" aria-label="Close" data-index"${index}"></button></li>`)
   }
 
   //insert html array into newIdea text area
-  $newIdea.innerHTML = html.join('')
+  $ideaContainer.innerHTML = html.join('')
 
   //invoke array
 
   ListnewIdea()
+
+}
 
  /* for (let i = 0; i < data.length; i++) {
   
     HTML.push(`<li class="list-group-item d-flex justify-content-between">${$ideaContainer[i]}
 <button type="button" class="btn close" aria-label="close" data-index="${index}"></button></li>`)
 
-}
+ }
 
 /* Add Ideas function */
   
