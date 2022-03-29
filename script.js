@@ -66,13 +66,18 @@ $content.addEventListener('click', function (e) {
     
     // increase the score data for this specific idea
 
-    
-    generateIdeas()
+     data.ideas[3].score++
+      generateIdeas()
 
   }
 
   if (e.target.classList.contains('idea_downvote')) {
+    
     alert('downvote')
+
+    //decreases the score for the specific idea
+
+
   }
 
   if (e.target.classList.contains('idea_edit')) {
