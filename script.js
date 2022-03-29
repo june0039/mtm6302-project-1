@@ -18,15 +18,21 @@ for (let i = 0; i < data.ideas.length; i++) {
   let userButtons = ''
 
   if (data.ideas[i].username == 'currentuser') {
+
     you = '<span>YOU</span>'
-   
+    userButtons = `
+   <button class='idea_edit'>Edit</button>
+   <button class= 'idea_delete'>Delete</button>`
+  }
+
+{
     $content.innerHTML += `
-    <div>
+    <div class='idea'>
 
     <section>
-      <button>+</button>
+      <button class='idea_upvote'>+</button>
     <span> ${data.ideas[i].score} </span>
-     <button>-</button>
+     <button class= 'idea_downvote'>-</button>
     </section>
    
     <section>
@@ -41,12 +47,33 @@ for (let i = 0; i < data.ideas.length; i++) {
 
 $content.addEventListener('click', function (e) {
 
-  alert()
+  console.log(e.target.classList)
+  if (e.target.classList.contains('idea_upvote')) {
+
+    alert('upvote')
+    
+  }
+
+  if (e.target.classList.contains('idea_downvote')) {
+    alert('downvote')
+  }
+
+  if (e.target.classList.contains('idea_edit')) {
+    
+    alert('edit')
+  }
+
+      
+  if (e.target.classList.contains('idea_delete')) {
+    
+    alert('delete')
+  }
+
 })
 
 const $addIdea = document.getElementById('addIdea')
 
- $addIdea.addEventListener('click', function (e) {
+ $addIdea.addEventListener('click', function () {
   
   alert('hault')
 
