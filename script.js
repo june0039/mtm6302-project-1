@@ -15,11 +15,13 @@ const $data = document.getElementById('data');
 const $content = document.getElementById('content')
 
 //Loop through idea array
+
 for (let i = 0; i < data.ideas.length; i++) {
   let you = ''
   let userButtons = ''
 
   //function with If statement compares info and gets the ideas, sets up the buttons
+  
   function generateIdeas() {
     $content.innerHTML
    
@@ -59,6 +61,13 @@ for (let i = 0; i < data.ideas.length; i++) {
 
 //Adds the click function to all buttons
 $content.addEventListener('click', function (e) {
+
+  const $idea = e.target.closest('.idea')
+  if ($idea == null) {
+      return
+  }
+  
+  
 
   if (e.target.classList.contains('idea_upvote')) {
 
