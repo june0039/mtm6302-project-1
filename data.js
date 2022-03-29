@@ -1,4 +1,5 @@
-
+//Idea Forum Data sheet of code to use
+//By: Julie Juneau Student: #040930994
 
 const data = {
   currentUser: 'currentUser',
