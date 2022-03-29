@@ -53,11 +53,12 @@ for (let i = 0; i < data.ideas.length; i++) {
     }
 
   }
-}
 
-//Calling the function to display the ideas
+
+  //Calling the function to display the ideas
   generateIdeas()
 
+}
 
 //Adds the click function to all buttons
 $content.addEventListener('click', function (e) {
@@ -67,7 +68,7 @@ $content.addEventListener('click', function (e) {
       return
   }
   
-  
+
 
   if (e.target.classList.contains('idea_upvote')) {
 
