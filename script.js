@@ -79,8 +79,9 @@ $content.addEventListener('click', function (e) {
 const $addIdea = document.getElementById('addIdea')
 
  $addIdea.addEventListener('click', function () {
-  
-  alert('hault')
+   e.preventDefault()
+   
+  alert('add')
 
 })
 
@@ -146,4 +147,4 @@ function displayData() {
   /*ideaScore
 /*idea
 /*up vote/ down vote
-/* you tag delete add
+ you tag delete add*/
