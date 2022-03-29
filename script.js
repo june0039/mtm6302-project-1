@@ -9,14 +9,17 @@ Student# 040930994*/
 //const $form = document.getElementById('form');
 //const $username = document.getElementById('username');
 
+//Declaring the variables
 
 const $data = document.getElementById('data');
 const $content = document.getElementById('content')
 
+//Loop through idea array
 for (let i = 0; i < data.ideas.length; i++) {
   let you = ''
   let userButtons = ''
 
+  //If statement compares info and gets the ideas, sets up the buttons
   if (data.ideas[i].username == 'currentuser') {
 
     you = '<span>YOU</span>'
@@ -45,6 +48,7 @@ for (let i = 0; i < data.ideas.length; i++) {
   }
 }
 
+//Adds the click function to all buttons
 $content.addEventListener('click', function (e) {
 
   console.log(e.target.classList)
@@ -71,6 +75,7 @@ $content.addEventListener('click', function (e) {
 
 })
 
+// Alert function to display alert
 const $addIdea = document.getElementById('addIdea')
 
  $addIdea.addEventListener('click', function () {
