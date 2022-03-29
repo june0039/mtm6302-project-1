@@ -19,17 +19,20 @@ for (let i = 0; i < data.ideas.length; i++) {
   let you = ''
   let userButtons = ''
 
-  //If statement compares info and gets the ideas, sets up the buttons
-  if (data.ideas[i].username == 'currentuser') {
+  //function with If statement compares info and gets the ideas, sets up the buttons
+  function generateIdeas() {
+    $content.innerHTML
+   
+    if (data.ideas[i].username == 'currentuser') {
 
-    you = '<span>YOU</span>'
-    userButtons = `
+      you = '<span>YOU</span>'
+      userButtons = `
    <button class='idea_edit'>Edit</button>
    <button class= 'idea_delete'>Delete</button>`
-  }
+    }
 
-{
-    $content.innerHTML += `
+    {
+      $content.innerHTML += `
     <div class='idea'>
 
     <section>
@@ -45,17 +48,27 @@ for (let i = 0; i < data.ideas.length; i++) {
 
     </section>
     </div> `
+    }
+
   }
 }
+
+//Calling the function to display the ideas
+  generateIdeas()
+
 
 //Adds the click function to all buttons
 $content.addEventListener('click', function (e) {
 
-  console.log(e.target.classList)
   if (e.target.classList.contains('idea_upvote')) {
 
     alert('upvote')
     
+    // increase the score data for this specific idea
+
+    
+    generateIdeas()
+
   }
 
   if (e.target.classList.contains('idea_downvote')) {
