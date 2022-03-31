@@ -14,16 +14,16 @@ Student# 040930994*/
 const $data = document.getElementById('data');
 const $content = document.getElementById('content')
 
-//Loop through idea array
+  //function with If statement compares info and gets the ideas, sets up the buttons
+  
+  function generateIdeas() {
+    $content.innerHTML = ''
+
+    //Loop through idea array
 
 for (let i = 0; i < data.ideas.length; i++) {
   let you = ''
   let userButtons = ''
-
-  //function with If statement compares info and gets the ideas, sets up the buttons
-  
-  function generateIdeas() {
-    $content.innerHTML
    
     if (data.ideas[i].username == 'currentuser') {
 
@@ -58,7 +58,7 @@ for (let i = 0; i < data.ideas.length; i++) {
   //Calling the function to display the ideas
   generateIdeas()
 
-}
+
 
 //Adds the click function to all buttons
 $content.addEventListener('click', function (e) {
@@ -67,26 +67,28 @@ $content.addEventListener('click', function (e) {
   if ($idea == null) {
       return
   }
-  
 
+  // Grabbing the index
+  const index = idea.dataset.index
+  console.log(index)
 
+  //Increases a vote score when upvote is activvated 
   if (e.target.classList.contains('idea_upvote')) {
-
-    alert('upvote')
+ data.ideas[index].score++
+    generateIdeas()
     
     // increase the score data for this specific idea
 
-     data.ideas[3].score++
+     data.ideas[index].score++
       generateIdeas()
 
   }
 
   if (e.target.classList.contains('idea_downvote')) {
-    
-    alert('downvote')
 
-    //decreases the score for the specific idea
-
+//decreases the score for the specific idea   
+ data.ideas[index].score--
+  generateIdeas()
 
   }
 
@@ -95,7 +97,7 @@ $content.addEventListener('click', function (e) {
     alert('edit')
   }
 
-      
+   //Deletes Idea and modifies data   
   if (e.target.classList.contains('idea_delete')) {
     
     alert('delete')
