@@ -15,6 +15,7 @@ const $data = document.getElementById('data');
 const $content = document.getElementById('content')
 const $editTextarea = document.getElementById('editTextarea')
 
+let index = null
   //function with If statement compares info and gets the ideas, sets up the buttons
   
 function generateIdeas() {
@@ -58,8 +59,6 @@ function generateIdeas() {
 
   //Calling the function to display the ideas
   generateIdeas()
-
-  let index = null
 
   //Adds the click function to all buttons
   $content.addEventListener('click', function (e) {
