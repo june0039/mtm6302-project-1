@@ -6,12 +6,12 @@ body{
     font-family:sans-serif;
 }
 
-.ideas{
+.idea{
 
-    background-color:aqua;
+    background-color:rgb(165, 207, 207);
 }
 
-.popup {
+#popup {
 
     position:fixed;
     background: rgba(0,0,0,0.568);
@@ -23,14 +23,14 @@ body{
 
 }
 
-#popup-card{
+.popup-card{
     background: white;
     max-width: 400px;
 
 
 }
 
-.hidden{
+#popup.hidden{
 
     display:none;
 }

@@ -13,6 +13,7 @@ Student# 040930994*/
 const $popup = document.getElementById('popup');
 const $data = document.getElementById('data');
 const $content = document.getElementById('content')
+const $editTextarea = document.getElementById('editTextarea')
 
   //function with If statement compares info and gets the ideas, sets up the buttons
   
@@ -25,7 +26,7 @@ function generateIdeas() {
     let you = ''
     let userButtons = ''
    
-    if (data.ideas[i].username == 'currentuser') {
+    if (data.ideas[i].username == 'currentUser') {
 
       you = '<span>YOU</span>'
       userButtons = `
@@ -58,7 +59,7 @@ function generateIdeas() {
   //Calling the function to display the ideas
   generateIdeas()
 
-
+  let index = null
 
   //Adds the click function to all buttons
   $content.addEventListener('click', function (e) {
@@ -69,7 +70,7 @@ function generateIdeas() {
     }
 
     // Grabbing the index
-    const index = idea.dataset.index
+    const index = $idea.dataset.index
     console.log(index)
 
     //Increases a vote score when upvote is activvated 
@@ -95,6 +96,8 @@ function generateIdeas() {
     if (e.target.classList.contains('idea_edit')) {
     
       $popup.classList.remove('hidden')
+      $popup.querySelector('.popup_textarea').innerHTML = data.ideas
+      [index].content
 
     }
 
@@ -109,10 +112,24 @@ function generateIdeas() {
 
   })
 
+$popup.addEventListener('click', function (e) {
+  if (e.target.classList.contains('popup_cancel')) {
+    $popup.classList.add('hidden')
+  }
+
+  if (e.target.classList.contains('popup_update')) {
+    $popup.classList.add('hidden')
+    data.ideas[index].content = $editTextarea.value
+    generateIdeas()
+
+  }
+})
+
   // Alert function to display alert
   const $addIdea = document.getElementById('addIdea')
 
-  $addIdea.addEventListener('click', function () {
+$addIdea.addEventListener('click', function (e) {
+    
     e.preventDefault()
    
     alert('add')
