@@ -134,7 +134,24 @@ $addIdea.addEventListener('click', function (e) {
    
     alert('add')
 
-  })
+})
+  
+
+//add new idea
+//modify array with new idea-push
+
+
+//const idea = {
+ // username: 'currentUser',
+ // content: '',
+  //score: 0,
+
+//}
+
+//data.ideas.push(idea)-update data
+
+
+
 
 
 /*Fuction to display all the info in an array 
