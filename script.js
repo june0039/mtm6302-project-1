@@ -97,10 +97,13 @@ function generateIdeas() {
       alert('edit')
     }
 
-    //Deletes Idea and modifies data   
+    //Deletes Idea and modifies the data perminately    
     if (e.target.classList.contains('idea_delete')) {
-    
-      alert('delete')
+
+    //Using Splice to remove info from the array and delete it
+      data.ideas.splice(4, 1)
+      generateIdeas()
+
     }
 
   })
