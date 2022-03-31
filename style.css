@@ -2,6 +2,14 @@
 By: Julie Juneau
 Student:040930994*/
 
-.idea{
+.ideas{
+
     background-color:aqua;
+}
+
+.hidden {
+
+    position:fixed;
+    display:none;
+
 }

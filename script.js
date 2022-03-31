@@ -10,7 +10,7 @@ Student# 040930994*/
 //const $username = document.getElementById('username');
 
 //Declaring the variables
-
+const $popup = document.getElementById('popup');
 const $data = document.getElementById('data');
 const $content = document.getElementById('content')
 
@@ -53,7 +53,7 @@ function generateIdeas() {
     }
 
   }
-
+}
 
   //Calling the function to display the ideas
   generateIdeas()
@@ -94,7 +94,8 @@ function generateIdeas() {
 
     if (e.target.classList.contains('idea_edit')) {
     
-      alert('edit')
+      $popup.classList.remove('hidden')
+
     }
 
     //Deletes Idea and modifies the data perminately    
@@ -118,7 +119,6 @@ function generateIdeas() {
 
   })
 
-}
 
 /*Fuction to display all the info in an array 
 function displayData() {
