@@ -16,14 +16,14 @@ const $content = document.getElementById('content')
 
   //function with If statement compares info and gets the ideas, sets up the buttons
   
-  function generateIdeas() {
-    $content.innerHTML = ''
+function generateIdeas() {
+  $content.innerHTML = ''
 
-    //Loop through idea array
+  //Loop through idea array
 
-for (let i = 0; i < data.ideas.length; i++) {
-  let you = ''
-  let userButtons = ''
+  for (let i = 0; i < data.ideas.length; i++) {
+    let you = ''
+    let userButtons = ''
    
     if (data.ideas[i].username == 'currentuser') {
 
@@ -60,62 +60,62 @@ for (let i = 0; i < data.ideas.length; i++) {
 
 
 
-//Adds the click function to all buttons
-$content.addEventListener('click', function (e) {
+  //Adds the click function to all buttons
+  $content.addEventListener('click', function (e) {
 
-  const $idea = e.target.closest('.idea')
-  if ($idea == null) {
+    const $idea = e.target.closest('.idea')
+    if ($idea == null) {
       return
-  }
+    }
 
-  // Grabbing the index
-  const index = idea.dataset.index
-  console.log(index)
+    // Grabbing the index
+    const index = idea.dataset.index
+    console.log(index)
 
-  //Increases a vote score when upvote is activvated 
-  if (e.target.classList.contains('idea_upvote')) {
- data.ideas[index].score++
-    generateIdeas()
+    //Increases a vote score when upvote is activvated 
+    if (e.target.classList.contains('idea_upvote')) {
+      data.ideas[index].score++
+      generateIdeas()
     
-    // increase the score data for this specific idea
+      // increase the score data for this specific idea
 
-     data.ideas[index].score++
+      data.ideas[index].score++
       generateIdeas()
 
-  }
+    }
 
-  if (e.target.classList.contains('idea_downvote')) {
+    if (e.target.classList.contains('idea_downvote')) {
 
-//decreases the score for the specific idea   
- data.ideas[index].score--
-  generateIdeas()
+      //decreases the score for the specific idea   
+      data.ideas[index].score--
+      generateIdeas()
 
-  }
+    }
 
-  if (e.target.classList.contains('idea_edit')) {
+    if (e.target.classList.contains('idea_edit')) {
     
-    alert('edit')
-  }
+      alert('edit')
+    }
 
-   //Deletes Idea and modifies data   
-  if (e.target.classList.contains('idea_delete')) {
+    //Deletes Idea and modifies data   
+    if (e.target.classList.contains('idea_delete')) {
     
-    alert('delete')
-  }
+      alert('delete')
+    }
 
-})
+  })
 
-// Alert function to display alert
-const $addIdea = document.getElementById('addIdea')
+  // Alert function to display alert
+  const $addIdea = document.getElementById('addIdea')
 
- $addIdea.addEventListener('click', function () {
-   e.preventDefault()
+  $addIdea.addEventListener('click', function () {
+    e.preventDefault()
    
-  alert('add')
+    alert('add')
 
-})
+  })
 
-
+}
 
 /*Fuction to display all the info in an array 
 function displayData() {
