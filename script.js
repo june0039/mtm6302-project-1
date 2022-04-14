@@ -94,8 +94,8 @@ function generateIdeas() {
     if (e.target.classList.contains('idea_edit')) {
     
       $popup.classList.remove('hidden')
-      $popup.querySelector('.popup_textarea').innerHTML = data.ideas
-      [index].content
+      $editTextarea.innerHTML = data.ideas
+      content
 
     }
 
