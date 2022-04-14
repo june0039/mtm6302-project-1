@@ -117,7 +117,7 @@ $popup.addEventListener('click', function (e) {
 
   if (e.target.classList.contains('popup_update')) {
     $popup.classList.add('hidden')
-    data.ideas[index].content = $editTextarea.value
+    data.ideas[index].content = $edit.  textarea.value
     generateIdeas()
 
   }
