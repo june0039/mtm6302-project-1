@@ -126,7 +126,7 @@ $popup.addEventListener('click', function (e) {
   // Alert function to display alert
   const $addIdea = document.getElementById('addIdea')
 
-$addIdea.addEventListener('click', function (e) {
+$addIdea.addEventListener('submit', function (e) {
     
     e.preventDefault()
    
@@ -138,7 +138,7 @@ $addIdea.addEventListener('click', function (e) {
 
   }
 
-  data.ideas.push(idea)
+  data.ideas.push($newidea.value)
 
 })
   
