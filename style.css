@@ -3,16 +3,22 @@ By: Julie Juneau
 Student:040930994*/
 
 body{
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    grid-gap:10px;
     font-family:sans-serif;
 }
 
-.idea{
+.idea {
 
     background-color:lightblue;
 }
 
 .hidden{
-    opacity: 80%;
+    
+    display:none;
+    
 }
 
 #popup {

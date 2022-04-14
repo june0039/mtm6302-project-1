@@ -69,8 +69,8 @@ function generateIdeas() {
     }
 
     // Grabbing the index
-     index = $idea.dataset.index
-    console.log($idea)
+     const index = $idea.dataset.index
+    console.log(index)
 
     //Increases a vote score when upvote is activated 
     if (e.target.classList.contains('idea_upvote')) {
@@ -103,7 +103,7 @@ function generateIdeas() {
     if (e.target.classList.contains('idea_delete')) {
 
     //Using Splice to remove info from the array and delete it
-      data.ideas.splice(4, 1)
+      data.ideas.splice(index, 1)
       generateIdeas()
 
     }
