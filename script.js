@@ -35,9 +35,9 @@ function generateIdeas() {
    <button class= 'idea_delete'>Delete</button>`
     }
 
-    {
+    
       $content.innerHTML += `
-    <div class='idea'>
+    <div class='idea'data-index='${i}'>
 
     <section>
       <button class='idea_upvote'>+</button>
@@ -55,7 +55,7 @@ function generateIdeas() {
     }
 
   }
-}
+
 
   //Calling the function to display the ideas
   generateIdeas()
@@ -69,13 +69,12 @@ function generateIdeas() {
     }
 
     // Grabbing the index
-    const index = $idea.dataset.index
-    console.log(index)
+     index = $idea.dataset.index
+    console.log($idea)
 
-    //Increases a vote score when upvote is activvated 
+    //Increases a vote score when upvote is activated 
     if (e.target.classList.contains('idea_upvote')) {
-      data.ideas[index].score++
-      generateIdeas()
+    
     
       // increase the score data for this specific idea
 
