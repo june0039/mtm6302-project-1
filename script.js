@@ -117,7 +117,7 @@ $popup.addEventListener('click', function (e) {
 
   if (e.target.classList.contains('popup_update')) {
     $popup.classList.add('hidden')
-    data.ideas[index].content = $editTextarea.innerHTML
+    data.ideas[index].content = $editTextarea.value
     generateIdeas()
 
   }
@@ -130,86 +130,15 @@ $addIdea.addEventListener('click', function (e) {
     
     e.preventDefault()
    
-    alert('add')
+  const idea = {
+
+    username: 'currentUser',
+    content: '',
+    score: 0,
+
+  }
+
+  data.ideas.push(idea)
 
 })
   
-
-//add new idea
-//modify array with new idea-push
-
-
-//const idea = {
- // username: 'currentUser',
- // content: '',
-  //score: 0,
-
-//}
-
-//data.ideas.push(idea)-update data
-
-
-
-
-
-/*Fuction to display all the info in an array 
-function displayData() {
-  //created array to hold html string
-  
-  const HTML = []
-
-  /* For loop to fill array 
-
-  for (let index = 0; index < data.length; index++) {
-    HTML.push(`<li class="list-group-item"> ${data[index]}
-    <button type="button" class="btn-close" aria-label="Close" data-index"${index}"></button></li>`)
-  }
-
-  //insert html array into newIdea text area
-  $ideaContainer.innerHTML = html.join('')
-
-  //invoke array
-
-  ListnewIdea()
-
-}
-
- /* for (let i = 0; i < data.length; i++) {
-  
-    HTML.push(`<li class="list-group-item d-flex justify-content-between">${$ideaContainer[i]}
-<button type="button" class="btn close" aria-label="close" data-index="${index}"></button></li>`)
-
- }
-
-/* Add Ideas function */
-  
-  //$addIdea.addEventListener('submit', function (e) {
-  //*Adds Idea to the Idea's area
-   // e.preventDefault();
-
-   // data.push($newIdea.value)
-    
-    //clear the form
-
-  //  $addnewIdea.reset()
-
-    //Invoke the new idea to update 
-     
-   // List.ideas[];
-
-   // displayData.ideas[]
-
-
-//})
-
-/* Need a "you" tag on current user and up down vote */
-
-/* Delete a Idea button */
-/*<button type ="delete" class="btn-delete" aria-label="Delete"></button>
-    
-/* Edit an Idea  button*/
-
-  /*ideaScore
-/*idea
-/*up vote/ down vote
- you tag delete add*/
