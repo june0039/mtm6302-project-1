@@ -7,7 +7,7 @@ Student# 040930994*/
 //const $newIdea = document.getElementById('newIdea');
 //const $delete = document.getElementById('delete');
 //const $form = document.getElementById('form');
-//const $username = document.getElementById('username');
+
 
 //Declaring the variables
 const $popup = document.getElementById('popup');
@@ -117,7 +117,7 @@ $popup.addEventListener('click', function (e) {
 
   if (e.target.classList.contains('popup_update')) {
     $popup.classList.add('hidden')
-    data.ideas[index].content = $edit.  textarea.value
+    data.ideas[index].content = $editTextarea.innerHTML
     generateIdeas()
 
   }
